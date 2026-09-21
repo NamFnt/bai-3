@@ -1,96 +1,317 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMPLE CAFE MENU</title>
+    <style>
+        .title
+        {
+            color: rgb(151, 32, 45);
+            font-family: serif;
+            text-indent: 450px;
+            text-shadow: 8px 8px 0px rgba(220, 150, 150, 0.6);        
+        }
+        .menu-bar
+        {
+            border-top: 1px solid red;
+            background-color: rgba(228, 152, 153);
+            color: white;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 0 auto;
+            height: 40px;
+        }
+        .menu-bar p
+        {
+            border-right: 2px solid blue;
+            font-size: 10pt;
+            padding: 5px;
+            padding-right: 20px;
+            margin-left: 30px;
+           
+        }
+        .menu-bar p:nth-child(3)
+        {
+            display: inline-block;
+            border-right: 2px solid blue;
+            font-size: 10pt;
+            padding: 5px;
+            padding-right: 10px;
+            margin-left: 20px;
+        }
+        .menu-bar input
+        {
+            width: 130px;
+            height: 12px;
+            margin-left: 50px;
+        }
+        .menu-bar button
+        {
+            width: 32px;
+            height: 18px;
+            margin-left: 4px;
+            font-size: 9pt;
+        }
+        .menu-bar span
+        {
+            border-right: 2px solid blue;
+            padding: 1px 10px;
+        }
+        .home
+        {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 7px;
+        }
+        .menu-bar:last-child
+        {
+            border-right: none;
+        }
+        .main
+        {
+            justify-content: flex-start;
+            display: flex;
+            align-items: flex-start;
+           
+        }
+        .trai
+        {
+            margin: 6px 0;
+        }
+        .trai p
+        {
+            color: white;
+            background-color: rgba(228, 152, 153);
+            width: 185px;
+            height: 12px;
+            border-radius: 20px;
+            padding: 6px;
+            text-indent: 10px;
+            margin: 3px 0px;
+            line-height: 11px;
+        }
+        .trai img
+        {
+            width: 190px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: 15px;
+            box-shadow: 10px 20px 10px rgba(253, 193, 205);
+        }
+        .giua
+        {
+            margin: 0px 0;
+        }
+        .giua h1
+        {
+            color: rgba(174, 63, 67);
+            background-color: rgba(228, 152, 153);
+            margin-left: 200px;
+            margin-top: 8px;
+            width: 360px;
+            text-indent: 15px;
+            letter-spacing: 16px;
+            font-size: 18pt;
+        }
+        .giua .none
+        {
+            width: 360px;
+            height: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 14pt;
+            
+        }
+        .giua ul
+        {
+            margin-top: -16px;
+            margin-left: 5px;
+            margin-bottom: -20px;
+            font-size: 10pt;
+        }
+        .giua .backtotop
+        {
+            color: rgb(182, 95, 99);
+            margin-top: 18px;
+            margin-left: 10px;
+            display: inline-block;
+            font-size: 10pt;
+        }
+        .giua .infor
+        {
+            margin-left: 10px;
+        }
+        .giua .infor input[type="text"],
+        .giua .infor input[type="email"],
+        .giua .infor input[type="tel"] {
+            width: 335px;
+            padding: 12px 15px;
+            margin: 10px 10px;
+            box-sizing: border-box;
+        }
+        .giua .infor select {
+            width: 335px; 
+            padding: 12px 15px;
+            margin: 10px 10px;
+        }
+        .giua .infor .checkbox label
+        {
+            display: inline-block;
+            margin: 0px -2px;
+            transform: translateY(-12px);
+            font-size: 9pt;
+        }
+        .giua .infor textarea
+        {
+            width: 670px;
+            height: 50px;
+            margin: 10px 15px;
+        }
+        .giua .infor textarea::placeholder
+        {
+            color: black;
+        }
+        .giua .infor button
+        {
+            width: 60px;
+            height: 30px;
+            margin: 2px 2px 20px;
+        }
+        .giua .infor button:first-of-type
+        {
+            margin-left: 10px;
+        }
+        .phai
+        {
+            background-color: black;
+            color: white;
+            width: 320px;
+            height: 480px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .phai h2
+        {
+            margin-top: 0px;
+            font-size: 20pt;
+        }
+        .phai h3
+        {
+            text-indent: 30px;
+        }
+        .phai img
+        {
+            margin-top: -20px;
+            margin-left: 30px;
+            width: 240px;
+            height: 140px;
+        }
+        .phai p
+        {
+            font-size: 10pt;
+            padding-left: 30px;
+            text-align: left;
+            margin-top: -5px;
+        }
+        .phai a
+        {
+            color: rgb(170, 148, 152);
+        }
+        .footer
+        {
+            background-color: rgba(228, 152, 153);
+            border-top: 1px solid red;
+            width: 1261px;
+            height: 60px;
+        }
+        .footer p
+        {
+            margin: 0;
+            line-height: 50px;
+            font-size: 19pt;
+            color: white;
+            text-indent: 370px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 1px solid red; width: 1261px; height: 0 auto;">
+        <h1 id="title" class="title"><i>EXAMPLE CAFE MENU</i></h1>
+        <div class="menu-bar">
+            <span><img class="home" alt="HOME" src="D:\Coder\assets\icons8-home-50.png"></span>
+            <p>STARTER</p>
+            <p>MAIN COURSES</p>
+            <P>DESSERTS</P>
+            <input id="tim_kiem"><button name="time_kiem">Go</button>
+        </div>
+        <div class="main">
+            <div class="trai">
+                <p>Cafe Latte</p>
+                <p>Capuchino</p>
+                <p>Ocean Blue</p>
+                <p>Ice-cream Cafe</p>
+                <p>Order Online</p>
+                <img alt="HÌNH" src="D:\Coder\assets\company.png">
+            </div>
+            <div class="giua">
+                <h1>Starter</h1>
+                <ul>
+                    <li>Chesrut and Mushroom Goujons</li>
+                    <li>Goat Cheese</li>
+                    <li><p style="color: rgba(226, 163, 139); margin: 0px;"><b>HONEY SOY CHICKEN KEBABS</b></p></li>
+                    <li>Seafood Salad</li>
+                </ul>
+                <a class="backtotop" href="#title"><b>Back to Top</b></a>
+                <h1 style="margin-top: 0px;">Desserts</h1>
+                <ul>
+                    <li>Lemon Sorbet</li>
+                    <li>Chocolate Mud Pie</li>
+                    <li>Pecan Pie</li>
+                    <li>Selection of fine Cheeses from Around the World</li>
+                </ul>
+                <a class="backtotop" href="#title"><b>Back to Top</b></a>
+                <h1 class="none">INFORMATION</h1>
+                <div class="infor">
+                    <form>
+                        <div class="form">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name*">
+                        </div>
+                        
+                        <div class="form">
+                            <input type="email" placeholder="Email">
+                            <input type="tel" placeholder="Telephone">
+                        </div>
+
+                        <div class="checkbox">
+                            <select>
+                            <option>USA</option>
+                            </select>
+                            <label><input name="quoc_gia" type="radio" value="vietnam">Vietnamese</label>
+                            <label><input name="quoc_gia" type="radio" value="foreigner">Foreigner</label>
+                        </div>
+                        <textarea placeholder="comment"></textarea><br>
+                        <button type="submit">Submit</button><button type="reset">Cacel</button>
+                    </form>
+                </div>
+            </div>
+            <div class="phai">
+                <h2>Events</h2>
+                <h3>Regular Meetings</h3>
+                <img src="D:\Coder\assets\meeting.png" alt="MEETING">
+                <p>Host your regular team meetings or activities in<br> the comfort of your own private room. <a href=""><b>Read<br> more...</b></a></p>
+                <h3>Product Launches</h3>
+                <img src="D:\Coder\assets\launch.png" alt="lauch">
+                <p>Launch your product with ease in a space that<br> truly fits its image.<a href=""><b>Read more...</a></b></p>
+            </div>
+        </div>
+        <div class="footer">
+            <p><i><b>ABC Company <sup>&copy;</sup> - 12345678 - abccoffee@gmail.com</b></i></p>
+        </div>
+    </div>
+</body>
+</html>
 </html>
